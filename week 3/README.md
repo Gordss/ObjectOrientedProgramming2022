@@ -17,15 +17,16 @@
 ```c++
 class SomeClass {
     int mCapacity;
+    int mSize;
 
-    void capacity();
+    void capacity(int size);
 };
 ```
 
 ## Example for enum
 
 ```c++
-enum { MAX_VALUE, BQL_HLQB };
+enum MyEnum { MAX_VALUE, BQL_HLQB };
 ```
 
 # Multiple file compilation
@@ -145,3 +146,6 @@ bool hasType(AnimalType type);
 4. Да се реализират следните функции:
 - Date readDate(ifstream& in) – прочита датата от поток и я връща
 - void writeDate(ofstream& out) – записва датата в потока
+
+5. Да се реализира метод:
+- void getCurrentDate() - който инициализира датата с текущата дата на вашия компютър
