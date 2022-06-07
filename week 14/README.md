@@ -24,7 +24,7 @@ public:
      *         the specified PIN is correct and an account with sufficient amount in the specified currency exists.
      *         In case of three consecutive incorrect PIN payment attempts, the card should be blocked.
      **/
-    virtual bool pay(Card card, int pin, double amount, std::std::string currency) = 0;
+    virtual bool pay(Card card, int pin, double amount, Currency currency) = 0;
 
     /**
      * Executes an online card payment
@@ -39,7 +39,7 @@ public:
      *         the specified PIN is correct and an account with sufficient amount in the specified currency exists.
      *         In case of three consecutive incorrect PIN payment attempts, the card should be blocked.
      **/
-    virtual bool payOnline(Card card, int pin, double amount, std::std::string currency, std::std::string shopURL) = 0;
+    virtual bool payOnline(Card card, int pin, double amount, Currency currency, std::string shopURL) = 0;
 
     /**
      * Adds money to a Revolut account
@@ -85,7 +85,7 @@ public:
     /**
      * @return the type of the card: "PHYSICAL", "VIRTUALPERMANENT" or "VIRTUALONETIME"
      **/
-    virtual std::string getType() = 0;
+    virtual CardType getType() = 0;
 
     /**
      * @return the card's expiration date
@@ -122,7 +122,7 @@ private:
     std::string IBAN;
 public:
     ... 
-    virtual std::string getCurrency() = 0;
+    virtual Currency getCurrency() = 0;
 }
 ```
 
