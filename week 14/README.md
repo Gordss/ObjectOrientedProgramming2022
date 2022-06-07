@@ -7,7 +7,7 @@
 - добаване и трансфериране на пари между сметки
 - плащания
 
-Създайте клас **Revolut** с конструктор Revolut(std::vector<Account> accounts, std::vector<Card> cards), който имплементира следния интерфейс:
+Създайте клас **Revolut** с конструктор Revolut(std::vector<Account*>& accounts, std::vector<Card*>& cards), който имплементира следния интерфейс:
 
 ``` c++ 
 class RevolutAPI {
